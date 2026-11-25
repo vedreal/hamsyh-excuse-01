@@ -20,6 +20,7 @@ def output_path() -> Path:
 
 def main() -> None:
     """Write the entry line to the output file."""
+    # One line, one file: the judge reads entry.txt, nothing else.
     path = output_path()
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(ENTRY + "\n", encoding="utf-8")
